@@ -1,0 +1,20 @@
+package Inheritance;
+
+public class MainClass {
+ 
+	public static void main(String[] args) {
+		
+		Animals genericAnimal = new Animals();
+		
+//		System.out.println(genericAnimal.getName());
+//		System.out.println(genericAnimal.favFood);
+		
+		Cat cat = new Cat("Billy", "Tuna", "Rubber Mouse");
+		
+		System.out.println(cat.getToy());
+		
+		System.out.println(cat.getName());
+		
+		System.out.println(cat.favFood);
+	}
+}

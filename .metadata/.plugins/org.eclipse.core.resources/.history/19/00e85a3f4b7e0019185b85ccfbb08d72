@@ -1,0 +1,19 @@
+package Inheritance;
+
+public class DogSubclass extends AnimalSuperClass {
+
+	
+	String dogSound = "BARK!";
+	String action = "Eats bone and runs around yard!";
+	public DogSubclass(String gender, int age) {
+		super(gender, age);
+	}
+	
+	public void makeSound() {
+		System.out.println(dogSound);
+	}
+	
+	public void doSomething() {
+		System.out.println(action);
+	}
+}

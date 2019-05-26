@@ -1,0 +1,23 @@
+package ObjectClass;
+
+import InterfacesAndAbstractClasses.Vehicle;
+
+/*
+ * Every object you ever create, inherits all methods from a class called "object class"
+ * 
+ */
+public class MainClass {
+
+	public static void main(String[] args) {
+		//here we are creating an object of type vehicle
+		Object superCar = new Vehicle();
+		
+		//in order for us to get access to methods of Vehicle, we have to CAST it as type vehicle
+		System.out.println(((Vehicle)superCar).getSpeed());
+		
+		
+		Vehicle superTruck = new Vehicle();
+		
+		System.out.println(superCar.equals(superTruck));
+	}
+}

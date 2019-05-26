@@ -1,0 +1,10 @@
+package Threads;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		Thread getTime = new ThreadPractice1();
+		
+		getTime.start();
+	}
+}

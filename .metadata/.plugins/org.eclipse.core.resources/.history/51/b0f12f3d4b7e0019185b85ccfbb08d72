@@ -1,0 +1,37 @@
+package Inheritance;
+
+public class CowSubclass extends AnimalSuperClass {
+	
+	String cowSound = "MOOOO!";
+	String cowAction = "(Eats Grass)";
+	boolean isOnFarm;
+
+	public CowSubclass(String gender, int age) {
+		super(gender, age);
+	}
+	
+	public CowSubclass(int age, boolean isONFarm) {
+		super(age);
+	}
+	
+	public CowSubclass(String gender) {
+		super(gender);
+	}
+	
+	public void makeSound() {
+		System.out.println(cowSound);
+	}
+	
+	public void doSomething() {
+		System.out.println(cowAction);
+	}
+	
+	public void printCowAge() {
+		System.out.println("cow is" + getAge() + " years old!");
+	}
+	
+	
+	
+	
+
+}

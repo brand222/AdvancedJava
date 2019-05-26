@@ -1,0 +1,20 @@
+package Collections;
+
+public class ArrayList {
+
+	//ArrayLists implement the List interface
+	//They are the most frequently used data structure
+	//They create an object array that grows as needed
+	
+	//you can add null values
+	//it is not thread safe
+	//They can add quick access to elements based on index
+	//Developers can add or remove elements by index value
+	
+	//Easily find the index of the first occurance of an element
+	//The inital size capacity can be set when created
+	//the trimTo() method can reduce the size
+	public static void main(String[] args) {
+		
+	}
+}

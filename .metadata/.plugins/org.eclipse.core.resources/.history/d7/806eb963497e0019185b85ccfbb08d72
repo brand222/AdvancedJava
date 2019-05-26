@@ -1,0 +1,16 @@
+package Inheritance;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		CowSubclass buubuu = new CowSubclass("Male", 3);
+		CowSubclass tommy = new CowSubclass("Girl");
+		
+		System.out.println(buubuu.getAge());
+		buubuu.isAnimalOld();
+		
+		tommy.getAge();
+	}
+	
+	
+}
