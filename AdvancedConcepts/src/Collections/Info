@@ -1,0 +1,33 @@
+Collections are a way to store objects into a container for which you can iterate over.
+
+Questions to ask when using a collection
+
+1) Does the order matter?
+2) Are duplicates allowed?
+3) How fast will this operation take?
+4) How much memory is being used?
+
+
+Iterable - all types of collection implement Iterable
+
+Collection extends Iterable: Collection interface declares all the methods that a collection must have
+For ex. at(), remove(), isEmpty(), toArray() etc...
+
+3 types of collections:
+
+1) Sets - Do not allow duplicates
+- No Duplicates
+- Unordered
+
+2) Lists
+- Duplicates are allowed
+- Order of elements is significant
+
+
+3) Queues
+- FIFO - first in first out operations
+- Like a real-life queue
+
+4) Maps
+- Do not extend collections interface
+- Contains key-value pairs

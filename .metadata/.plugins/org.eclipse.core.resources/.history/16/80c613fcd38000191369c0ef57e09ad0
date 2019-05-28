@@ -1,0 +1,78 @@
+package Comparators;
+
+import java.time.LocalDate;
+
+public class Employee implements Comparable<Employee> {
+
+	// it is easy to compare two values (floats, doubles, int etc..)
+	// but what about comparing two objects? Thats a bit more complex
+
+	/*
+	 * You need to explicitly define for the objects of user defined classes
+	 * should be compared. For this purpose, Java provides two interfaces called
+	 * "Comparable" and "Comparator"
+	 * 
+	 * Once you define how the objects should be compared using any of these
+	 * interfaces, you'll be able to sort them using various library functions
+	 * like Collections.sort or Arrays.sort
+	 * 
+	 * 	 */
+
+	private int id;
+	private String name;
+	private double salary;
+	private LocalDate joiningDate;
+	
+	public Employee(int id, String name, double salary, LocalDate joiningDate) {
+		this.id = id;
+		this.name = name;
+		this.salary = salary; 
+		this.joiningDate = joiningDate;
+	}
+		public int getId() {
+			return id;		
+		}
+		
+		public void setId(int id) {
+			this.id = id;
+	}
+		
+		public String getName() {
+			return name;
+		}
+		
+		public void setName(String name) {
+			this.name = name;
+		}
+
+		public double getSalary() {
+			return salary;
+		}
+		
+		public void setSalary(double salary) {
+			this.salary = salary;
+		}
+		
+		public LocalDate getJoiningDate() {
+			return joiningDate;
+		}
+		
+		public void setJoiningDate(LocalDate joiningDate) {
+			this.joiningDate = joiningDate;
+		}
+		
+		//here we are implementing the Comparable interface's method called "compareTo()"
+		@Override
+		public int compareTo(Employee anotherEmployee) {
+			return this.getId() - anotherEmployee.getId();
+		}
+		
+		//Compare 2 Employees based on their ID
+		
+		/**
+		 * @param another employee - The Employee to be compared
+		 * @return A negative integer, zero, or a positive integer depending on if this employee
+		 * 	has an ID that is less than, equal to, or greater than the supplied employee object
+		 */
+	
+}
