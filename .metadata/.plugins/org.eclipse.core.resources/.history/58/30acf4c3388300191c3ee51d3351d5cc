@@ -1,0 +1,13 @@
+package Streams;
+
+import java.util.Arrays;
+
+public class StreamsWithArrays {
+
+	public static void main(String[] args) {
+		
+		String[] names = {"Brandon", "Effrosini", "Maro", "John", "Lacie"};
+		
+		Arrays.stream(names).sorted().forEach(System.out::println);
+	}
+}

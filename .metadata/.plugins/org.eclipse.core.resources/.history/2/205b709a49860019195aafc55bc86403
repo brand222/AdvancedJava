@@ -1,0 +1,23 @@
+package Streams;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import Collections.Lists;
+
+public class StreamsWithLists {
+
+	public static void main(String[] args) {
+	        String[] myStringArray = { "Brandon", "Betty", "Abigail", "Timothy", "Amy" };
+	        List<String> people = Arrays.asList( myStringArray );
+	     
+	        people
+	        .stream()
+	        .map(String::toLowerCase)
+	        .filter(x -> x.startsWith("a"))
+	        .forEach(System.out::println);
+	    }
+	
+	
+}

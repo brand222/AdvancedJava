@@ -1,9 +1,0 @@
-package Inheritance;
-
-public class CowSubclass extends AnimalSuperClass {
-
-	public CowSubclass(String gender, int age) {
-		super(gender, age);
-	}
-
-}

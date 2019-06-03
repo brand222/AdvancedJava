@@ -1,7 +1,0 @@
-
-public class SubClass {
-
-	//in java, there is only single inheritance
-	//however, you are able to implement multiple interfaces
-	
-}
