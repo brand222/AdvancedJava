@@ -1,0 +1,56 @@
+package Streams;
+import java.util.stream.*;
+import java.util.*;
+public class MiscExamples {
+
+	public static void main(String[] args) {
+		
+		/**
+		 * Example 1: Integer Streams
+		 */
+		IntStream.range(1, 10)
+		.forEach(System.out::print);
+		System.out.println();
+		
+		/**
+		 * Example 2: Integer Stream with skip
+		 */
+		
+		IntStream
+		.range(1,  10)
+		.skip(5)
+		.forEach(x -> System.out.println(x));
+		System.out.println();
+		
+		
+		/**
+		 * Example 3: Integer stream with sum
+		 */
+		System.out.println(
+				IntStream
+				.range(1, 5)
+				.sum());
+		System.out.println();
+		
+		/**
+		 * Example 4: Stream.of, sorted and findFirst
+		 */
+		
+		Stream.of("Ava", "Aneri", "Alberto")
+		.sorted()
+		//here we are going to find the first item
+		.findFirst()
+		//then we will print out the first item in the list
+		.ifPresent(System.out::println);
+		
+		/**
+		 * Example 5: Stream from array, sort, filter, and print
+		 */
+		
+		String[] names = {"Al", "Kushal", "Tommy", "Brent", "Sarika", "amanda", "Hans", "Shivika", "Sam"};
+		Arrays.stream(names)//same as Stream.of(names);
+		.filter(x -> x.startsWith("S"))
+		.sorted()
+		.forEach(System.out::println);
+	}
+}

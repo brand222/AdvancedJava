@@ -94,8 +94,6 @@ public class MiscExamples {
 		.forEach(System.out::println);
 		bands.close();
 		System.out.println();
-		
-		
 		/**
 		 * Example 9: Stream rows from text file and save to list
 		 */
@@ -103,88 +101,8 @@ public class MiscExamples {
 		List<String> bands2 = Files.lines(Paths.get("C:\\Users\\Brandon Mc\\bands.txt"))
 				.map(String::toLowerCase)
 				.filter(x -> x.contains("the"))
-				//here we save the stream to list
 				.collect(Collectors.toList());
-		//now we print out everything in that list
 		bands2.forEach(x -> System.out.println(x));
-		System.out.println();
-		
-		/**
-		 * Example 10: Stream rows from CSV file and count
-		 */
-		
-		Stream<String> rows1 = Files.lines(Paths.get("C:\\Users\\Brandon Mc\\data.txt"));
-		
-		int rowCount = (int)rows1
-				.map(x -> x.split(","))
-				.filter(x -> x.length == 3)
-				.count();
-		System.out.println(rowCount + " rows.");
-		rows1.close();
-		System.out.println();
-				
-		/**
-		 * Example 11: Stream rows from CSV file, parse data from rows
-		 */
-		
-		Stream<String> rows2 = Files.lines(Paths.get("C:\\Users\\Brandon Mc\\data.txt"));
-		rows2
-		.map(x -> x.split(","))
-		.filter(x -> x.length == 3)
-		.filter(x -> Integer.parseInt(x[1]) > 15)
-		.forEach(x -> System.out.println(x[0] + " " + x[1] + " " + x[2]));
-		rows2.close();
-		System.out.println();
-		
-		/**
-		 * Example 12: Stream rows from CSV file, store fields into HashMap
-		 */
-		
-		Stream<String> rows3 = Files.lines(Paths.get("C:\\Users\\Brandon Mc\\data.txt"));
-		Map<String, Integer> map = new HashMap<>();
-		map = rows3
-				//first we split the rows by the commas
-				.map(x -> x.split(","))
-				//now we filter by rows ONLY with a length of three between
-				//each comma
-				.filter(x -> x.length == 3)
-				//we will also filter by the second item which is
-				//greater than 15
-				.filter(x -> Integer.parseInt(x[1]) > 15)
-				//and finally, convert the stream to a HashMap
-				.collect(Collectors.toMap(
-						x -> x[0],
-						x -> Integer.parseInt(x[1])));
-		rows3.close();
-		//then loop and print out our result
-		for (String key : map.keySet()) {
-			System.out.println(key + " " + map.get(key));
-		}
-		System.out.println();
-		
-		/**
-		 * Example 13: Reduction - sum
-		 * sum() only works with integers
-		 * This example demonstrates how to get the sum of double numbers
-		 */
-		
-		double total = Stream.of(7.3, 1.5, 4.8)
-				//starting point 0.0, a = running total, b is next element
-				.reduce(0.0, (Double a, Double b) -> a + b);
-		System.out.println("Total = " + total);
-		System.out.println();
-		
-		
-		/**
-		 * Example 14: Reduction - summary statistics
-		 * 
-		 */
-		//this gives the count, sum, min, average, and max of this particular stream
-		IntSummaryStatistics summary = IntStream.of(7,12,19,88,73,4,10)
-				.summaryStatistics();
-		System.out.println(summary);
-		
-						
 				
 	}
 }

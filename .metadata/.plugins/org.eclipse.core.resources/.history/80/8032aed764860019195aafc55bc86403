@@ -179,7 +179,7 @@ public class MiscExamples {
 		 * Example 14: Reduction - summary statistics
 		 * 
 		 */
-		//this gives the count, sum, min, average, and max of this particular stream
+		
 		IntSummaryStatistics summary = IntStream.of(7,12,19,88,73,4,10)
 				.summaryStatistics();
 		System.out.println(summary);

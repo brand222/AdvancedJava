@@ -1,0 +1,36 @@
+package Streams;
+import java.util.stream.*;
+import java.util.*;
+public class MiscExamples {
+
+	public static void main(String[] args) {
+		
+		/**
+		 * Example 1: Integer Streams
+		 */
+		IntStream.range(1, 10)
+		.forEach(System.out::print);
+		System.out.println();
+		
+		/**
+		 * Example 2: Integer Stream with skip
+		 */
+		
+		IntStream
+		.range(1,  10)
+		.skip(5)
+		.forEach(x -> System.out.println(x));
+		System.out.println();
+		
+		
+		/**
+		 * Example 3: Integer stream with sum
+		 */
+		
+		System.out.println(
+				IntStream
+				.range(1, 5)
+				.sum());
+		System.out.println();
+	}
+}
