@@ -1,0 +1,14 @@
+package Lambdas;
+
+import java.util.function.Consumer;
+
+public class Consumers {
+
+	public static void main(String[] args) {
+		
+		Consumer<String> consumerStr = (s) -> System.out.println(s.toLowerCase());
+		consumerStr.accept("bLAH BLAH BLAH BLAH BLAH");
+		
+		System.out.println(consumerStr);
+	}
+}

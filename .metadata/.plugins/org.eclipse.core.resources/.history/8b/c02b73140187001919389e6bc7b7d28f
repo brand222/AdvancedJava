@@ -1,0 +1,34 @@
+package Lambdas;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+
+public class Basics {
+
+	public static void main(String[] args) {
+		
+		/**
+		 * A predicate in general means a statement about something is either
+		 * true or false. In programming, a predicate represents a single argument
+		 * function that returns a boolean value.
+		 * 
+		 * Predicates in java are implemented with interfaces
+		 */
+		
+		//here we are creating a predicate that checks if a string has a length
+		//of less than 10.
+		Predicate<String> stringLen = (s) -> s.length() > 6;
+		System.out.println(stringLen.test("Apples") + " - Apples is less than 10");
+	
+	List<String> names = Arrays.asList("Brandon", "Henderson", "Thompson", "Alexanders", "Tom", "Billy");
+	
+	
+	List<String> names2 = names.stream().filter(stringLen).collect(Collectors.toList());
+	
+	names2.forEach(System.out::println);
+	}
+}
